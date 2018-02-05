@@ -1,4 +1,5 @@
-const history        = require('../helpers/search-history.helper');
+const history      = require('../helpers/search-history.helper');
+const searchEngine = require('../helpers/search-engine.helper');
 
 
 function showImagesByTerm(req, res) {
@@ -18,7 +19,14 @@ function showImagesByTerm(req, res) {
     if (err) {
       returnHome(err);
     } else {
-      res.json({});
+      var offset = req.query.offset || 1;
+      searchEngine.search(term, offset, (err, images) => {
+        if (err) {
+          returnHome(err);
+        } else {
+          res.json(images || []);
+        }
+      })
     }
   })
 }
