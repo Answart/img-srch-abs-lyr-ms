@@ -45,5 +45,67 @@
       </p>
     </footer>
 
+    <script>
+      // function googleSearchEngine() {
+      //     var cx = '004839914922103642486:ysdqcnciffo';
+      //     var gcse = document.createElement('script');
+      //     gcse.type = 'text/javascript';
+      //     gcse.async = true;
+      //     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      //     var s = document.getElementsByTagName('script')[0];
+      //     s.parentNode.insertBefore(gcse, s);
+      // };
+      // googleSearchEngine();
+
+      var data1 = {
+        "0": {
+            "url": "https://i.ytimg.com/vi/AZL9Sl2BC70/maxresdefault.jpg",
+            "snippet": "Lolcats Funny cats 2017 - YouTube",
+            "thumbnail":	"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJFHmB-RbsTEH7IV6HdwkWXChnDDG24us-TdS_OpClDl0CYW4KGHIY54",
+            "context":	"https://www.youtube.com/watch?v=AZL9Sl2BC70"
+        },
+        "1": {
+          "url": "http://i0.kym-cdn.com/photos/images/newsfeed/000/024/740/lolcats-funny-pictures-halp-not-for-sale.jpg",
+          "snippet": "Lolcats Funny cats 2017 - YouTube",
+          "thumbnail":	"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlL11_9PbybfWKO97GPAJY14zqm2RPtcIHGBZcr_1LSas7K7o0yP43zSc",
+          "context":	"http://knowyourmeme.com/photos/24740-lolcats"
+        }
+      };
+      document.getElementById("code1").innerHTML = JSON.stringify(data1, undefined, 2);
+
+      var data2 = {
+        "0": {
+          "term": "lolcats funny",
+          "when": "2018-02-04T19:45:06.785Z"
+        },
+        "1": {
+          "term": "abundace",
+          "when": "2018-02-04T19:14:01.188Z"
+        },
+        "2": {
+          "term":	"cats",
+          "when":	"2018-02-05T02:04:32.799Z"
+        }
+      };
+      document.getElementById("code2").innerHTML = JSON.stringify(data2, undefined, 2);
+
+      var data3 = {
+        "0": {
+          "term":	"cats",
+          "when":	"2018-02-05T02:04:32.799Z"
+        },
+        "1": {
+          "term":	"cats",
+          "when":	"2018-02-05T02:04:36.394Z"
+        },
+        "2": {
+          "term":	"cats",
+          "when":	"2018-02-05T02:05:04.210Z"
+        }
+      }
+      document.getElementById("code3").innerHTML = JSON.stringify(data3, undefined, 2);
+
+    </script>
+
 </body>
 </html>
