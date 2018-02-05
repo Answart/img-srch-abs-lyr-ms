@@ -35,7 +35,7 @@ function showSearchHistory(req, res) {
         errors: req.flash('errors')
       });
     } else {
-      res.json();
+      res.json(docs);
     }
   })
 }
