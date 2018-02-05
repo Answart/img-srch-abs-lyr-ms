@@ -4,7 +4,8 @@
   "description": "An app that that returns a unique JSON object depending on the route /api/imagesearch or /api/latest/imagesearch (w/pagination).",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
