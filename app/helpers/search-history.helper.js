@@ -1,6 +1,18 @@
 const SearchHistory = require('../models/SearchHistory');
 
 
+function create(term, cb) {
+  var searchHistory = new SearchHistory({
+    term: term
+  })
+
+  searchHistory.save((err, savedHistoryDoc) => {
+    if (err) { return cb(err) };
+
+    cb(null, savedHistoryDoc);
+  })
+}
+
 function find(query, cb) {
   SearchHistory.find(query).exec(function(err, results) {
     if (err) { return cb(err) };
@@ -18,5 +30,6 @@ function find(query, cb) {
 
 
 module.exports = {
+  create: create,
   find: find
 };
