@@ -11,5 +11,7 @@ router.get('/api/imagesearch/:term',          eventsController.showImagesByTerm)
 router.get('/api/latest/imagesearch',         eventsController.showSearchHistory);
 router.get('/api/latest/imagesearch/:term',   eventsController.showSearchHistory);
 
+router.get('*',                               eventsController.show404);
+
 
 module.exports = router;

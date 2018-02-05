@@ -48,8 +48,17 @@ function showSearchHistory(req, res) {
   })
 }
 
+function show404(req, res) {
+  req.flash('errors', 'The route you entered does not exist.');
+
+  res.render('pages/home', {
+    errors: req.flash('errors')
+  });
+}
+
 
 module.exports = {
   showImagesByTerm: showImagesByTerm,
-  showSearchHistory: showSearchHistory
+  showSearchHistory: showSearchHistory,
+  show404: show404
 };
