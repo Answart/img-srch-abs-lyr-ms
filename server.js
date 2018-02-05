@@ -5,6 +5,7 @@ require('dotenv').config();
 const express    = require('express'),
   app            = express(),
   port           = process.env.PORT || 8000,
+  host           = '0.0.0.0',
   expressLayouts = require('express-ejs-layouts'),
   mongoose       = require('mongoose'),
   bodyParser     = require('body-parser'),
@@ -45,6 +46,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require('./app/routes'));
 
 
-app.listen(port, function() {
+app.listen(port, host, function() {
   console.log('Server running on port ' + port);
 });
