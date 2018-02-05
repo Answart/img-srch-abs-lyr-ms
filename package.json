@@ -1,0 +1,31 @@
+{
+  "name": "img-srch-abs-lyr",
+  "version": "1.0.0",
+  "description": "An app that that returns a unique JSON object depending on the route /api/imagesearch or /api/latest/imagesearch (w/pagination).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Answart/img-srch-abs-lyr.git"
+  },
+  "author": "Alexandra Swart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Answart/img-srch-abs-lyr/issues"
+  },
+  "homepage": "https://github.com/Answart/img-srch-abs-lyr#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-ejs-layouts": "^2.3.1",
+    "express-session": "^1.15.6",
+    "got": "^8.0.3",
+    "mongoose": "^5.0.3"
+  }
+}
