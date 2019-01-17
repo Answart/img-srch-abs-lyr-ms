@@ -1,70 +1,8 @@
-# img-srch-abs-lyr
-
-## Image Search Abstraction Layer
+# img-srch-abs-lyr-ms AKA Image Search Abstraction Layer Micro-service
 
 An app that that returns a unique JSON object depending on the route /api/imagesearch or /api/latest/imagesearch (w/pagination). Route /api/imagesearch returns a list of objects each containing a 'url', 'snippet', 'thumbnail', and 'context'. Route /api/latest/imagesearch returns a list of objects each containing a 'term' and a 'when' date.
 
 Data is received through [Google's Custom Search Engine](https://cse.google.com/cse).
-
-## User Stories
-
-- I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
-- I can paginate through the responses by adding a ?offset=2 parameter to the URL.
-- I can get a list of the most recently submitted search strings.
-
-## Install
-
-### Production
-
-```
-https://answart-img-srch-abs-lyr.herokuapp.com
-https://answart-img-srch-abs-lyr.herokuapp.com/api/imagesearch/cats
-https://answart-img-srch-abs-lyr.herokuapp.com/api/latest/imagesearch
-https://answart-img-srch-abs-lyr.herokuapp.com/api/latest/imagesearch/cats
-```
-
-### Local
-
-Set up Google Custom Search Engine
-
-1. Create a [Google Custom Search Engine](https://cse.google.com/cse).
-
-- Do not specify any sites to search but instead use the "Restrict Pages using Schema.org Types" under the "Advanced options".
-- For the most inclusive set, use the Schema: Thing. Make a note of the CSE ID.
-
-2. Enable Image Search
-
-- In your search engine settings, enable "Image search":
-
-3. Set up Google Custom Search Engine API
-
-- Register a new app and enable Google Custom Search Engine API here: [Google Developers Console](https://console.developers.google.com/). Remember the API key.
-
-Create your own server. I used mLab.com.
-Create a user on that server.
-
-Create your own .env file in the root directory with a DB_URI which links to your server. Here is an example:
-```
-PORT=8000
-DB_URI="mongodb://<dbuser>:<dbpassword>@ds123728.mlab.com:23728/answart-img-srch-abs-lyr"
-SECRET="my-super-secret"
-GGL_SRCH_ENGN_ID="<customsearchengineid>"
-GGL_SRCH_ENGN_PUBLIC_URL="<customsearchenginpublicurl>"
-GGL_SRCH_ENGN_API_KEY="<customsearchengineapikey>"
-```
-
-```
-npm install
-node server.js
-```
-
-```
-http://localhost:8000
-http://localhost:8000/api/imagesearch
-http://localhost:8000/api/latest/imagesearch
-```
-
-## Output
 
 /api/imagesearch/cats:
 ```
@@ -117,3 +55,71 @@ http://localhost:8000/api/latest/imagesearch
   }
 };
 ```
+
+User Stories
+------------
+
+- I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+- I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+- I can get a list of the most recently submitted search strings.
+
+Getting Started
+---------------
+
+Set up Google Custom Search Engine
+
+1. Create a [Google Custom Search Engine](https://cse.google.com/cse).
+
+- Do not specify any sites to search but instead use the "Restrict Pages using Schema.org Types" under the "Advanced options".
+- For the most inclusive set, use the Schema: Thing. Make a note of the CSE ID.
+
+2. Enable Image Search
+
+- In your search engine settings, enable "Image search":
+
+3. Set up Google Custom Search Engine API
+
+- Register a new app and enable Google Custom Search Engine API here: [Google Developers Console](https://console.developers.google.com/). Remember the API key.
+
+Create your own server. I used mLab.com.
+Create a user on that server.
+
+Create your own .env file in the root directory with a DB_URI which links to your server. Here is an example:
+```
+PORT=8000
+DB_URI="mongodb://<dbuser>:<dbpassword>@ds123728.mlab.com:23728/answart-img-srch-abs-lyr"
+SECRET="my-super-secret"
+GGL_SRCH_ENGN_ID="<customsearchengineid>"
+GGL_SRCH_ENGN_PUBLIC_URL="<customsearchenginpublicurl>"
+GGL_SRCH_ENGN_API_KEY="<customsearchengineapikey>"
+```
+
+Install dependencies then launch app @ [http://localhost:8000](http://localhost:8000)
+```
+$ npm install
+$ node server.js
+```
+
+Example routes:
+```
+http://localhost:8000
+http://localhost:8000/api/imagesearch
+http://localhost:8000/api/latest/imagesearch
+```
+
+View [app in production](https://answart-img-srch-abs-lyr.herokuapp.com) (if still active)
+
+```
+https://answart-img-srch-abs-lyr.herokuapp.com
+https://answart-img-srch-abs-lyr.herokuapp.com/api/imagesearch/cats
+https://answart-img-srch-abs-lyr.herokuapp.com/api/latest/imagesearch
+https://answart-img-srch-abs-lyr.herokuapp.com/api/latest/imagesearch/cats
+```
+
+NPM Commands
+------------
+
+| Command | Description |
+|---------|-------------|
+|npm install|Install dependencies in package.json|
+|node server.js|Start server port @ **localhost:8000**|
