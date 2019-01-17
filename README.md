@@ -63,6 +63,20 @@ User Stories
 - I can paginate through the responses by adding a ?offset=2 parameter to the URL.
 - I can get a list of the most recently submitted search strings.
 
+Tech Stack and Key Packages
+---------------------------
+
+* [Express](https://expressjs.com/): Fast, unopinionated, minimalist web framework for node
+* [EJS](https://ejs.co/): Embedded JavaScript templates
+* [express-ejs-layouts](https://github.com/Soarez/express-ejs-layouts#readme): Layout support for ejs in express
+* [express-session](https://github.com/expressjs/session#readme): Create express session middleware with given options
+* [connect-flash](https://github.com/jaredhanson/connect-flash#readme): Flash message middleware for Connect
+* [body-parser](https://github.com/expressjs/body-parser#readme): Node.js body parsing middleware
+* [cookie-parser](https://github.com/expressjs/cookie-parser): Parse Cookie header and populate req.cookies with an object keyed by the cookie names
+* [mongoose](https://mongoosejs.com/): MongoDB object modeling tool designed to work in an asynchronous environment
+* [connect-mongo](https://github.com/jdesboeufs/connect-mongo#readme): MongoDB session store for Connect and Express
+* [got](https://github.com/sindresorhus/got#readme): Simplified http requests
+
 Getting Started
 ---------------
 
