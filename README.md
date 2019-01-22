@@ -1,4 +1,8 @@
-# img-srch-abs-lyr-ms AKA Image Search Abstraction Layer Micro-service
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/4269260/51512883-fd2aab80-1dbc-11e9-9ba0-f6f04ea4f654.png" width="450">
+</p>
+
+# Image Search Abstraction Layer Micro-service
 
 An app that that returns a unique JSON object depending on the route /api/imagesearch or /api/latest/imagesearch (w/pagination). Route /api/imagesearch returns a list of objects each containing a 'url', 'snippet', 'thumbnail', and 'context'. Route /api/latest/imagesearch returns a list of objects each containing a 'term' and a 'when' date.
 
