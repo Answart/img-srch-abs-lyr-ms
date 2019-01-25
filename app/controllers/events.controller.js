@@ -7,6 +7,7 @@ function showImagesByTerm(req, res) {
 
   function returnHome(err) {
     req.flash('errors', err);
+
     res.render('pages/home', {
       errors: req.flash('errors')
     });
@@ -20,6 +21,7 @@ function showImagesByTerm(req, res) {
       returnHome(err);
     } else {
       var offset = req.query.offset || 1;
+
       searchEngine.search(term, offset, (err, images) => {
         if (err) {
           returnHome(err);
@@ -33,7 +35,7 @@ function showImagesByTerm(req, res) {
 
 function showSearchHistory(req, res) {
   var query = req.params.term;
-  var searchQuery = query ? {term: query} : {};
+  var searchQuery = query ? { term: query } : {};
 
   history.find(searchQuery, (err, docs) => {
     if (err) {
@@ -58,7 +60,7 @@ function show404(req, res) {
 
 
 module.exports = {
-  showImagesByTerm: showImagesByTerm,
-  showSearchHistory: showSearchHistory,
-  show404: show404
+  showImagesByTerm,
+  showSearchHistory,
+  show404
 };
