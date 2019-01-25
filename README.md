@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/4269260/51512883-fd2aab80-1dbc-11e9-9ba0-f6f04ea4f654.png" width="450">
+  <img src="https://user-images.githubusercontent.com/4269260/51512883-fd2aab80-1dbc-11e9-9ba0-f6f04ea4f654.png" height="250" width="350">
+  <img src="https://user-images.githubusercontent.com/4269260/51729172-72011e00-2027-11e9-9203-91152493ea9f.png" height="250" width="350">
 </p>
 
 # Image Search Abstraction Layer Micro-service
@@ -9,7 +10,7 @@ An app that that returns a unique JSON object depending on the route /api/images
 Data is received through [Google's Custom Search Engine](https://cse.google.com/cse).
 
 /api/imagesearch/cats:
-```
+```shell
 "0": {
     "url": "https://i.ytimg.com/vi/AZL9Sl2BC70/maxresdefault.jpg",
     "snippet": "Lolcats Funny cats 2017 - YouTube",
@@ -25,7 +26,7 @@ Data is received through [Google's Custom Search Engine](https://cse.google.com/
 ```
 
 /api/latest/imagesearch:
-```
+```shell
 {
   "0": {
     "term": "lolcats funny",
@@ -43,7 +44,7 @@ Data is received through [Google's Custom Search Engine](https://cse.google.com/
 ```
 
 /api/latest/imagesearch/cats:
-```
+```shell
 {
   "0": {
     "term":	"cats",
@@ -103,7 +104,7 @@ Create your own server. I used mLab.com.
 Create a user on that server.
 
 Create your own .env file in the root directory with a DB_URI which links to your server. Here is an example:
-```
+```shell
 PORT=8000
 DB_URI="mongodb://<dbuser>:<dbpassword>@ds123728.mlab.com:23728/answart-img-srch-abs-lyr"
 SECRET="my-super-secret"
@@ -113,7 +114,7 @@ GGL_SRCH_ENGN_API_KEY="<customsearchengineapikey>"
 ```
 
 Install dependencies then launch app @ [http://localhost:8000](http://localhost:8000)
-```
+```shell
 $ npm install
 $ node server.js
 ```
@@ -139,5 +140,5 @@ NPM Commands
 
 | Command | Description |
 |---------|-------------|
-|npm install|Install dependencies in package.json|
-|node server.js|Start server port @ **localhost:8000**|
+| npm install | Install dependencies in package.json |
+| npm start | Launch app @ **localhost:8000** |
