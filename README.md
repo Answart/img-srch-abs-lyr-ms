@@ -1,9 +1,19 @@
+<!-- [travis]: https://travis-ci.org/Answart/img-srch-abs-lyr-ms -->
+[dependency]: https://david-dm.org/Answart/img-srch-abs-lyr-ms
+[snyk]: https://snyk.io/test/github/Answart/img-srch-abs-lyr-ms
+[MIT]: https://github.com/Answart/img-srch-abs-lyr-ms/blob/master/LICENSE.md
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/4269260/51512883-fd2aab80-1dbc-11e9-9ba0-f6f04ea4f654.png" height="250" width="350">
   <img src="https://user-images.githubusercontent.com/4269260/51729172-72011e00-2027-11e9-9203-91152493ea9f.png" height="250" width="350">
 </p>
 
 # Image Search Abstraction Layer Micro-service
+
+<!-- [![Build Status](https://travis-ci.org/Answart/img-srch-abs-lyr-ms.svg)][travis] -->
+[![dependencies Status](https://david-dm.org/Answart/img-srch-abs-lyr-ms/status.svg)][dependency]
+[![Known Vulnerabilities](https://snyk.io/test/github/Answart/img-srch-abs-lyr-ms/badge.svg)][snyk]
+[![MIT](https://img.shields.io/github/license/Answart/img-srch-abs-lyr-ms.svg)][MIT]
 
 An app that that returns a unique JSON object depending on the route /api/imagesearch or /api/latest/imagesearch (w/pagination). Route /api/imagesearch returns a list of objects each containing a 'url', 'snippet', 'thumbnail', and 'context'. Route /api/latest/imagesearch returns a list of objects each containing a 'term' and a 'when' date.
 
