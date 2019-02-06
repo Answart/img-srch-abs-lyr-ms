@@ -5,7 +5,7 @@ require('dotenv').config();
 const express    = require('express'),
   app            = express(),
   port           = process.env.PORT || 8000,
-  host           = '0.0.0.0',
+  host           = process.env.HOST || 'localhost',
   expressLayouts = require('express-ejs-layouts'),
   mongoose       = require('mongoose'),
   bodyParser     = require('body-parser'),
@@ -16,7 +16,7 @@ const express    = require('express'),
 
 
 // Connect to db
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.on('error', function(err) {
     console.error('MongoDB connection error: ' + err);
     process.exit(-1);

@@ -105,12 +105,13 @@ Create a user on that server.
 
 Create your own .env file in the root directory with a DB_URI which links to your server. Here is an example:
 ```shell
+HOST=localhost
 PORT=8000
-DB_URI="mongodb://<dbuser>:<dbpassword>@ds123728.mlab.com:23728/answart-img-srch-abs-lyr"
-SECRET="my-super-secret"
-GGL_SRCH_ENGN_ID="<customsearchengineid>"
-GGL_SRCH_ENGN_PUBLIC_URL="<customsearchenginpublicurl>"
-GGL_SRCH_ENGN_API_KEY="<customsearchengineapikey>"
+MONGODB_URI=mongodb://<dbuser>:<dbpassword>@<mlabdatabase>
+SECRET=my-super-secret
+GGL_SRCH_ENGN_ID=<customsearchengineid>
+GGL_SRCH_ENGN_PUBLIC_URL=<customsearchenginpublicurl>
+GGL_SRCH_ENGN_API_KEY=<customsearchengineapikey>
 ```
 
 Install dependencies then launch app @ [http://localhost:8000](http://localhost:8000)
