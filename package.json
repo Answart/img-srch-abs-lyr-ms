@@ -1,7 +1,7 @@
 {
-  "name": "img-srch-abs-lyr",
+  "name": "img-srch-abs-lyr-ms",
   "version": "1.0.0",
-  "description": "An app that that returns a unique JSON object depending on the route /api/imagesearch or /api/latest/imagesearch (w/pagination).",
+  "description": "An app that that returns a unique JSON object depending on the route /api/imagesearch or /api/latest/imagesearch.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

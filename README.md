@@ -10,23 +10,23 @@ An app that that returns a unique JSON object depending on the route /api/images
 Data is received through [Google's Custom Search Engine](https://cse.google.com/cse).
 
 /api/imagesearch/cats:
-```shell
+```json
 "0": {
-    "url": "https://i.ytimg.com/vi/AZL9Sl2BC70/maxresdefault.jpg",
-    "snippet": "Lolcats Funny cats 2017 - YouTube",
-    "thumbnail":	"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJFHmB-RbsTEH7IV6HdwkWXChnDDG24us-TdS_OpClDl0CYW4KGHIY54",
-    "context":	"https://www.youtube.com/watch?v=AZL9Sl2BC70"
+  "url": "https://i.ytimg.com/vi/AZL9Sl2BC70/maxresdefault.jpg",
+  "snippet": "Lolcats Funny cats 2017 - YouTube",
+  "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJFHmB-RbsTEH7IV6HdwkWXChnDDG24us-TdS_OpClDl0CYW4KGHIY54",
+  "context": "https://www.youtube.com/watch?v=AZL9Sl2BC70"
 },
 "1": {
   "url": "http://i0.kym-cdn.com/photos/images/newsfeed/000/024/740/lolcats-funny-pictures-halp-not-for-sale.jpg",
   "snippet": "Lolcats Funny cats 2017 - YouTube",
-  "thumbnail":	"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlL11_9PbybfWKO97GPAJY14zqm2RPtcIHGBZcr_1LSas7K7o0yP43zSc",
-  "context":	"http://knowyourmeme.com/photos/24740-lolcats"
+  "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlL11_9PbybfWKO97GPAJY14zqm2RPtcIHGBZcr_1LSas7K7o0yP43zSc",
+  "context": "http://knowyourmeme.com/photos/24740-lolcats"
 }
 ```
 
 /api/latest/imagesearch:
-```shell
+```json
 {
   "0": {
     "term": "lolcats funny",
@@ -37,26 +37,26 @@ Data is received through [Google's Custom Search Engine](https://cse.google.com/
     "when": "2018-02-04T19:14:01.188Z"
   },
   "2": {
-    "term":	"cats",
-    "when":	"2018-02-05T02:04:32.799Z"
+    "term": "cats",
+    "when": "2018-02-05T02:04:32.799Z"
   }
 };
 ```
 
 /api/latest/imagesearch/cats:
-```shell
+```json
 {
   "0": {
-    "term":	"cats",
-    "when":	"2018-02-05T02:04:32.799Z"
+    "term": "cats",
+    "when": "2018-02-05T02:04:32.799Z"
   },
   "1": {
-    "term":	"cats",
-    "when":	"2018-02-05T02:04:36.394Z"
+    "term": "cats",
+    "when": "2018-02-05T02:04:36.394Z"
   },
   "2": {
-    "term":	"cats",
-    "when":	"2018-02-05T02:05:04.210Z"
+    "term": "cats",
+    "when": "2018-02-05T02:05:04.210Z"
   }
 };
 ```
@@ -117,24 +117,16 @@ GGL_SRCH_ENGN_API_KEY=<customsearchengineapikey>
 Install dependencies then launch app @ [http://localhost:8000](http://localhost:8000)
 ```shell
 $ npm install
-$ node server.js
+$ npm start
 ```
 
 Example routes:
-```
-http://localhost:8000
-http://localhost:8000/api/imagesearch
-http://localhost:8000/api/latest/imagesearch
-```
+
+* http://localhost:8000
+* http://localhost:8000/api/imagesearch
+* http://localhost:8000/api/latest/imagesearch
 
 View [app in production](https://answart-img-srch-abs-lyr.herokuapp.com) (if still active)
-
-```
-https://answart-img-srch-abs-lyr.herokuapp.com
-https://answart-img-srch-abs-lyr.herokuapp.com/api/imagesearch/cats
-https://answart-img-srch-abs-lyr.herokuapp.com/api/latest/imagesearch
-https://answart-img-srch-abs-lyr.herokuapp.com/api/latest/imagesearch/cats
-```
 
 NPM Commands
 ------------
