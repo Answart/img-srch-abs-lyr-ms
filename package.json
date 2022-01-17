@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "reinstall": "rm -rf node_modules/;npm intall",
-    "start": "node server.js"
+    "start": "node server.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -21,14 +23,16 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "connect-flash": "^0.1.1",
-    "connect-mongo": "^2.0.1",
+    "connect-mongo": "^3.0.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^5.0.0",
-    "ejs": "^2.5.7",
+    "ejs": "^3.1.6",
     "express": "^4.16.2",
     "express-ejs-layouts": "^2.3.1",
     "express-session": "^1.15.6",
     "got": "^8.0.3",
-    "mongoose": "^5.0.3"
-  }
+    "mongoose": "^5.13.9",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
